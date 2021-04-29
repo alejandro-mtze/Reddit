@@ -60,7 +60,7 @@ struct FeedManager {
             var selftext = [String]()
             
             for value in data {
-                author.append(value.data.author)
+                author.append("Author: "+value.data.author)
                 title.append(value.data.title)
                 num_comments.append("\(value.data.num_comments)")
                 selftext.append(value.data.selftext)
