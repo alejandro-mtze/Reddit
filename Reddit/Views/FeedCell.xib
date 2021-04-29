@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,11 +62,21 @@
                             <constraint firstItem="fb5-ka-UL2" firstAttribute="leading" secondItem="QsB-6b-P80" secondAttribute="leading" id="wbf-JL-Dt2"/>
                         </constraints>
                     </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq9-8i-zdc">
+                        <rect key="frame" x="0.0" y="0.0" width="462" height="63"/>
+                        <connections>
+                            <action selector="buttonCell:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="962-B9-E4W"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="QsB-6b-P80" secondAttribute="bottom" constant="5" id="AhW-FA-xXf"/>
                     <constraint firstItem="QsB-6b-P80" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="FSe-oq-Dlk"/>
+                    <constraint firstAttribute="bottom" secondItem="Dq9-8i-zdc" secondAttribute="bottom" id="WRu-rV-yab"/>
+                    <constraint firstItem="Dq9-8i-zdc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="X9A-Iv-UGY"/>
                     <constraint firstItem="QsB-6b-P80" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gB2-ih-ZYC"/>
+                    <constraint firstAttribute="trailing" secondItem="Dq9-8i-zdc" secondAttribute="trailing" id="gvq-9B-Fhp"/>
+                    <constraint firstItem="Dq9-8i-zdc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oX2-6K-tv3"/>
                     <constraint firstAttribute="trailing" secondItem="QsB-6b-P80" secondAttribute="trailing" constant="10" id="yzg-fv-Hn1"/>
                 </constraints>
             </tableViewCellContentView>

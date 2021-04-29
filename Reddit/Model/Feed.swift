@@ -11,10 +11,12 @@ struct Feed {
     var title = [String]()
     var author = [String]()
     var nu_comments = [String]()
+    var selftext = [String]()
     
-    init(_ title: [String], _ author: [String], _ nu_comments: [String]) {
+    init(_ title: [String], _ author: [String], _ nu_comments: [String], _ selftext: [String]) {
         self.title = title
         self.author = author
         self.nu_comments = nu_comments
+        self.selftext = selftext
     }
 }

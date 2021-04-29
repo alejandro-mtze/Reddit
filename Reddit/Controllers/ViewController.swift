@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
-    var feed1 = Feed([""], [""], [""])
+    var feed1 = Feed([""], [""], [""], [""])
 
     var feedManager = FeedManager()
 
@@ -43,6 +43,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         cell.numberLabel.text = feed1.nu_comments[indexPath.row]
         cell.titleLabel.text = feed1.title[indexPath.row]
         
+        cell.cellDelegate = self
+        cell.index = indexPath
+        
         return cell
     }
     
@@ -57,11 +60,21 @@ extension ViewController: FeedManagerDelegate {
         DispatchQueue.main.async {
             print(feed.author[0])
             
-            self.feed1 = Feed(feed.title,feed.author, feed.num_comments)
+            self.feed1 = Feed(feed.title,feed.author, feed.num_comments, feed.selftext)
+            self.tableView.reloadData()
         }
     }
     
     func didFailWithError(error: Error) {
         print(error)
     }
+}
+
+extension ViewController: TableViewNew {
+    func onClickCell(index: Int) {
+        let palabra = self.feed1.selftext[index]
+        print("\(palabra)")
+    }
+    
+    
 }

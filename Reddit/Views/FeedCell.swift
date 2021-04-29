@@ -7,11 +7,22 @@
 
 import UIKit
 
+protocol TableViewNew {
+    func onClickCell(index: Int)
+}
+
 class FeedCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    
+    var cellDelegate: TableViewNew?
+    var index: IndexPath?
+    
+    @IBAction func buttonCell(_ sender: UIButton) {
+        cellDelegate?.onClickCell(index: index!.row)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
